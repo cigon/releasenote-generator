@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "@material-ui/core/Button";
-import Card from '@material-ui/core/Card';
+import { IconButton } from '@material-ui/core';
 
 export default function App() {
   const { register, handleSubmit } = useForm();
@@ -67,7 +67,10 @@ export default function App() {
           생성
         </Button>
       </form>
-      <div className="result">{Object.keys(result).length ? JSON.stringify(result) : ""}</div>
+      <div className="result">
+        {Boolean(Object.keys(result).length) && JSON.stringify(result)}
+        <IconButton aria-label="FileCopy" />
+      </div>
     </div>
   );
 }
