@@ -13,11 +13,8 @@ export default function App() {
       version: data.version,
       notes: [
         { role: "staff", lang: "ko", body: data.staffKo },
-        { role: "staff", lang: "en", body: data.staffEn },
         { role: "publisher", lang: "ko", body: data.publisherKo },
-        { role: "publisher", lang: "en", body: data.publisherEn },
         { role: "advertiser", lang: "ko", body: data.advertiserKo },
-        { role: "advertiser", lang: "en", body: data.advertiserEn },
       ],
     };
     setResult(value);
@@ -35,32 +32,14 @@ export default function App() {
         />
         <TextField
           multiline={true}
-          label="스태프 영어"
-          name="staffEn"
-          inputRef={register}
-        />
-        <TextField
-          multiline={true}
           label="퍼블리셔 한글"
           name="publisherKo"
           inputRef={register}
         />
         <TextField
           multiline={true}
-          label="퍼블리셔 영어"
-          name="publisherEn"
-          inputRef={register}
-        />
-        <TextField
-          multiline={true}
           label="광고주 한글"
           name="advertiserKo"
-          inputRef={register}
-        />
-        <TextField
-          multiline={true}
-          label="광고주 영어"
-          name="advertiserEn"
           inputRef={register}
         />
         <Button type="submit" variant="contained" color="primary">
