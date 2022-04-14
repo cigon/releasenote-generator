@@ -12,9 +12,9 @@ export default function App() {
     const value = {
       version: data.version,
       notes: [
-        { role: "staff", lang: "ko", body: data.staffKo },
-        { role: "publisher", lang: "ko", body: data.publisherKo },
-        { role: "advertiser", lang: "ko", body: data.advertiserKo },
+        { role: "staff", body: data.staffKo },
+        { role: "publisher", body: data.publisherKo },
+        { role: "advertiser", body: data.advertiserKo },
       ],
     };
     setResult(value);
